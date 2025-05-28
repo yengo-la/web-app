@@ -64,7 +64,11 @@ node server.js
 ```
 
 ## IMPORTANT
-This is done with the free service of (3-hour Forecast 5 days), not the paid service
+This is done with the free service of (3-hour Forecast 5 days), not the paid service.
+
 I could not fulfil the requirements(16 day plan subscription) entirely so I added additional features to compensate.
+
 The temp > 25 is added but because the temperature nowadays is not even close to 25 i just added a way to see more data.
+
 If there really is a city with >25c it will appear in a yellow-ish style.
+
