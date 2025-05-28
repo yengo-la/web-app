@@ -1,27 +1,27 @@
 .weather {
   min-height: 100vh;
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(0, 0, 0);
   padding: 10px;
 }
 
 .weather-container{
-  background-color: rgb(235, 235, 235);
+  background-color: rgb(0, 0, 0);
   display: block;
   padding: 1px;
 }
 .weather-container25{
-  background-color: rgb(223, 253, 103);
+  background-color: rgb(255, 255, 255);
   display: block;
   padding: 1px;
 }
 .weather-grid {
   display: grid;
-  grid-template-columns: 200px 1fr 100px; /* 2-column layout */
-  gap: 1px;
-  max-width: 900px;
+  grid-template-columns: 250px 1fr 100px;
+  gap: 20px;
+  max-width: 1420px;
   margin: auto;
   font-family: 'Segoe UI', sans-serif;
-  background: rgb(235, 235, 235)
+  background: rgb(0, 0, 0)
 }
 
 .weather-card {
@@ -29,41 +29,59 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 14px;
-  background-color: #f9f9f9;
+  background-color: #000000;
   border: none;
+  color: white;
 }
 .weather-conditions {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding: 10px 14px;
-  background-color: #f9f9f9;
+  background-color: #000000;
   border: none;
+  color: white;
 }
 .weather-temperature {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 14px;
-  background-color: #f9f9f9;
+  background-color: #000000;
   border: none;
+  border-radius: 50px;
 }
 .date {
   font-weight: 500;
   font-size: 14px;
-  color: #333;
+  color: #9d9d9d;
 }
 
 .time {
   font-weight: 500;
   font-size: 14px;
-  color: #333;
+  color: #9d9d9d;
 }
 
 .icon-temp {
-  display: flex;
+  position: relative;
+  display: inline-block;
   align-items: center;
   gap: 6px;
+}
+
+.icon-temp::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+  filter: blur(20px);
 }
 
 .icon-temp img {
@@ -80,7 +98,7 @@
 .humidity-icon span {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: #b59191;
 }
 .air-icon img {
   width: 40px;
@@ -89,7 +107,7 @@
 .air-icon span {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: #b59191;
 }
 .thermometer-icon img {
   width: 40px;
@@ -98,7 +116,7 @@
 .thermometer-icon span {
   font-size: 14px;
   font-weight: 600;
-  color: #333;
+  color: #b59191;
 }
 
 .wind-icon img {
@@ -120,22 +138,24 @@ span {
 
 .buttons {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   gap: 10px;
-  margin: 20px 0;
+  margin: 5px 0;
 }
 
 .buttons button {
   padding: 10px 20px;
-  background-color: #fff5f5;
-  color: #333;
+  background-color: #000000;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 20px;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  
 }
 
 .buttons button:hover{
-  background-color: #ffcccc;
-  color: #000;
+  text-shadow: 0 0 10px rgb(255, 255, 255);
+  transform: scale(1.1);
 }

@@ -4,13 +4,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image: url('../assets/backImage.jpg');
+    background-image: url('../assets/backImage2.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5), 
-    0 4px 10px rgba(0, 0, 0, 0.3);
+    0 4px 10px rgb(0, 0, 0);
 
 }
 
@@ -34,7 +34,7 @@
     padding: 0 10px;
     border: none;
     outline: none;
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 600;
     color: #333;
 }

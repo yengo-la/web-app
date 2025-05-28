@@ -2,4 +2,24 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    opacity: 0.97;
+}
+
+body{
+    position: relative;
+    
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('./assets/allmother.jpg') no-repeat center center;
+  background-size: cover;
+  opacity: 0.9; /* Adjust transparency */
+  z-index: -1;
+  pointer-events: none; /* Allows clicks to pass through */
 }
