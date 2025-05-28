@@ -1,0 +1,32 @@
+.navbar{
+    background: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 0.9;
+    width: 100%;
+}
+
+.navbarLogo{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarLogo:hover{
+    text-shadow: 0 0 5px #0ff
+}
+
+.navbarItem {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbarItem:hover {
+    text-shadow: 0 0 2px #0ff;
+    
+}

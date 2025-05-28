@@ -1,0 +1,141 @@
+.weather {
+  min-height: 100vh;
+  background-color: rgb(235, 235, 235);
+  padding: 10px;
+}
+
+.weather-container{
+  background-color: rgb(235, 235, 235);
+  display: block;
+  padding: 1px;
+}
+.weather-container25{
+  background-color: rgb(223, 253, 103);
+  display: block;
+  padding: 1px;
+}
+.weather-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr 100px; /* 2-column layout */
+  gap: 1px;
+  max-width: 900px;
+  margin: auto;
+  font-family: 'Segoe UI', sans-serif;
+  background: rgb(235, 235, 235)
+}
+
+.weather-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #f9f9f9;
+  border: none;
+}
+.weather-conditions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #f9f9f9;
+  border: none;
+}
+.weather-temperature {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background-color: #f9f9f9;
+  border: none;
+}
+.date {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.time {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.icon-temp {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon-temp img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.humidity-icon img {
+  width: 40px;
+  height: 40px;
+}
+.humidity-icon span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.air-icon img {
+  width: 40px;
+  height: 40px;
+}
+.air-icon span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+.thermometer-icon img {
+  width: 40px;
+  height: 40px;
+}
+.thermometer-icon span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.wind-icon img {
+  width: 40px;
+  height: 40px;
+}
+.win-icon span {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  background-color: #fff5f5;
+  color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:hover{
+  background-color: #ffcccc;
+  color: #000;
+}
