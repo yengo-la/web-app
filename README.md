@@ -79,7 +79,16 @@ If there really is a city with >25c it will appear in a yellow-ish style.
 At the moment of typing this I am working on the search bar.
 
 ## WEBSITES USED
-https://openweathermap.org/    API
-https://www.flaticon.com/    ICONS
-https://www.freepik.com/free-photos-vectors/    WALLPAPERS
+
+   API
+   
+https://openweathermap.org/
+
+   ICONS
+
+https://www.flaticon.com/
+
+   WALLPAPERS
+
+https://www.freepik.com/free-photos-vectors/
 
