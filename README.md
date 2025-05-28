@@ -7,6 +7,7 @@
 ```
 
 2.Dependencies if needed.
+
 --frontend
 ```terminal
   npm i axios
@@ -18,15 +19,15 @@
 
 ## NEED TO DO
 In the backend directory you must change the content of the .env file to your own credentials.
-
+```.env
 DB_HOST=your_host_name
 DB_USER=your_user
 DB_PASS=your_password
 DB_NAME=database_name()
 
 OPENWEATHER_API_KEY=your_api
-^
-|
+```
+
 For the OPENWEATHER_API_KEY copy paste your API key.
 You need to create a account in https://openweathermap.org/
 After that you must navigate to your Profile and click "API Keys"
