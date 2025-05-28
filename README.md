@@ -72,3 +72,5 @@ The temp > 25 is added but because the temperature nowadays is not even close to
 
 If there really is a city with >25c it will appear in a yellow-ish style.
 
+At the moment of typing this I am working on the search bar.
+
