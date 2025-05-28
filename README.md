@@ -29,9 +29,13 @@ OPENWEATHER_API_KEY=your_api
 ```
 
 For the OPENWEATHER_API_KEY copy paste your API key.
+
 You need to create a account in https://openweathermap.org/
-After that you must navigate to your Profile and click "API Keys"
+
+After that you must navigate to your Profile and click "API Keys".
+
 It will not work if you have just created your account, you must wait 2 hours before you use it.
+
 ```MySQL
 CREATE TABLE `weather_data` (
 	`id` INT NOT NULL AUTO_INCREMENT,
