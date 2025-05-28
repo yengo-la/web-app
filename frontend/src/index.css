@@ -1,26 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
+
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    opacity: 0.96; /* global opacity, works */
+    opacity: 0.98; /* global opacity, works WOOOOOOO*/
 }
-
-body{
-    font-family: "Montserrat", sans-serif;
+body, html {
+    background-color: #000;
 }
 
 body::before {
   content: '';
+  background-color: #000;
+  opacity: 0;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: url('./assets/allmother.jpg') no-repeat center center;
+  background: #000 url('./assets/allmother.jpg');
   background-size: cover;
-  opacity: 0.9; /* Adjust transparency */
   z-index: -1;
-  pointer-events: none; /* Allows clicks to pass through */
+  pointer-events: none;
+
+    animation: fadeInBackground 30s ease-in forwards;
+}
+@keyframes fadeInBackground {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.glow-logo {
+  color: white;
+  opacity: 0;
+  font-size: 2.5rem;
+  filter: blur(30px);
+  animation: glowBlast 2s ease-out 1s forwards;
+  text-shadow: 
+    0 0 60px #ffffff,
+    0 0 100px #ffffff,
+    0 0 140px #ffffff;
+  transition: all 0.5s ease-in-out;
+
+}
+
+@keyframes glowBlast {
+  0% {
+    opacity: 0;
+    filter: brightness(5);
+  }
+  40% {
+    opacity: 1;
+    filter: brightness(3);
+  }
+  100% {
+    opacity: 1;
+    filter: brightness(1);
+  }
+}
+.glow-logo:hover{
+    text-shadow: 0 0 5px rgb(255, 0, 0);
+    color: red;
 }
