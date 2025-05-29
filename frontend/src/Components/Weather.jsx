@@ -7,7 +7,7 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState([]);
   const [weatherData25, setWeatherData25] = useState([]);
   const [message, setMessage] = useState('');
-  const [selectedCity, setSelectedCity] = useState(null);
+  const [selectedCity, setSelectedCity] = useState('Skopje');
 
 
   // FETCH
