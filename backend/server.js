@@ -7,7 +7,7 @@ const cron = require('node-cron');
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173',
+  origin: 'http://localhost:5173',
   credentials: true
 }));
 app.use(express.json());
@@ -32,7 +32,6 @@ app.get('/weather/twentyfive', (req, res) => {
     weather_type
     FROM weather_data
     WHERE temperature > 25
-    ORDER BY date DESC, time DESC
     LIMIT 64
   `;
 
@@ -54,7 +53,6 @@ app.get('/weather', (req, res) => {
       temperature,
       weather_type
     FROM weather_data
-    ORDER BY date DESC, time DESC
     LIMIT 64
   `;
 

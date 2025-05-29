@@ -7,6 +7,8 @@
 .weather hr{ 
   opacity: 0;
   animation: bringForth 1s ease-out 4s forwards;
+  width: 75%;
+  margin: 0 auto;
 }
 
 @keyframes bringForth {
@@ -116,8 +118,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
-  height: 80%;
+  width: 60%;
+  height: 60%;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, transparent 70%);
   border-radius: 50%;
   z-index: 0;
