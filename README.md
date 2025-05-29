@@ -8,9 +8,7 @@ I could not fulfil the requirements(16 day plan subscription) entirely so I adde
 
 The temp > 25 is added but because the temperature nowadays is not even close to 25 i just added a way to see more data.
 
-If there really is a city with >25c it will appear in a yellow-ish style.
-
-At the moment of typing this I am working on the search bar.
+Will add a search bar in the component "NavbarExtension.jsx"
 
 ## Installation
 1. Clone the repository:
