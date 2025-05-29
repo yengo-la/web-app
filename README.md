@@ -63,6 +63,10 @@ COLLATE='utf8mb4_0900_ai_ci'
 ENGINE=InnoDB
 ;
 ```
+```MySQL
+ALTER TABLE weather_data
+ADD UNIQUE KEY unique_city_datetime (city, date, time);
+```
 
 
 ## Usage
