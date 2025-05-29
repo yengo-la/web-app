@@ -86,7 +86,7 @@ async function fetchAndStoreWeather(city) {
 
     const forecast = data.list[0]; // First forecast data point
     console.log('Forecast count:', data.list.length);
-    const weatherData = data.list.slice(0, 16).map(forecast => ({
+    const weatherData = data.list.slice(0, 32).map(forecast => ({
         city: data.city.name,
         date: forecast.dt_txt.split(' ')[0],
         time: forecast.dt_txt.split(' ')[1].slice(0, 5),
@@ -97,18 +97,10 @@ async function fetchAndStoreWeather(city) {
         weather_type: forecast.weather[0].icon
     }));
 
-    // DEL
-    await new Promise((resolve, reject) => {
-      db.query('DELETE FROM weather_data WHERE city = ? AND temperature < 25', [city], (err, result) => {
-        if (err) return reject(err);
-        console.log(`Deleted ${result.affectedRows} existing rows for ${city}`);
-        resolve();
-      });
-    });
 
     //INSERT
     const sql = `
-      INSERT INTO weather_data 
+      INSERT IGNORE INTO weather_data 
       (city, date, time, humidity, pressure, wind_speed, temperature, weather_type) 
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     `;
@@ -125,7 +117,6 @@ async function fetchAndStoreWeather(city) {
             entry.weather_type
 
         ];
-        console.log(`Inserting weather data for ${entry.date} ${entry.time}`);
 
       await new Promise((resolve, reject) => {
         db.query(sql, values, (err, result) => {

@@ -15,9 +15,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-.navbarLogo:hover{
-    text-shadow: 0 0 5px #0ff
-}
 
 .navbarItem {
     list-style: none;

@@ -33,7 +33,7 @@
   animation: appearance 1s ease-out forwards;
 }
 .weather-container25{
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
   display: block;
   padding: 1px;
   opacity: 0;
