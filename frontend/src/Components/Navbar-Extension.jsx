@@ -9,12 +9,6 @@ const NavbarExtension = () => {
 
     return(
         <div className='navbar-extension'>
-            <div className='inputBar'>
-                <img src={searchPng} alt="" />
-                <input type="text"  placeholder='Search your City, Zip Code or Address.' />
-            </div>
-
-
         </div>
     )
 }

@@ -40,6 +40,7 @@ const Weather = () => {
         <button onClick={() => handleClick('Skopje')}>Skopje</button>
         <button onClick={() => handleClick('Prilep')}>Prilep</button>
       </div>
+      <hr />
 
       {message && <p className="message">{message}</p>}
 
