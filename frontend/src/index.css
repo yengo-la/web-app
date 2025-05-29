@@ -23,8 +23,7 @@ body::before {
   background-size: cover;
   z-index: -1;
   pointer-events: none;
-
-    animation: fadeInBackground 20s ease-in forwards;
+  animation: fadeInBackground 20s ease-in forwards;
 }
 @keyframes fadeInBackground {
   0% {
@@ -46,7 +45,7 @@ body::before {
     0 0 60px #ffffff,
     0 0 100px #ffffff,
     0 0 140px #ffffff;
-  transition: all 0.5s ease-in-out;
+  transition: all 2 ease-in-out;
 
 }
 

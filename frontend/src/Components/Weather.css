@@ -6,7 +6,7 @@
 
 .weather hr{ 
   opacity: 0;
-  animation: bringForth 1s ease-out 4s forwards;
+  animation: bringForth 1s ease-out 1.8s forwards;
   width: 75%;
   margin: 0 auto;
 }
@@ -32,7 +32,7 @@
   display: block;
   padding: 1px;
   opacity: 0;
-  animation: appearance 1s ease-out 5s forwards;
+  animation: appearance 2s ease-out 2s forwards;
 }
 
 @keyframes appearance {
@@ -189,7 +189,7 @@ span {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   opacity: 0;
-  animation: buttony 2s ease-out 4.3s forwards;
+  animation: buttony 2s ease-out 2.3s forwards;
   font-size: 18px;
 }
 
