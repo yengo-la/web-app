@@ -99,7 +99,7 @@ async function fetchAndStoreWeather(city) {
 
     // DEL
     await new Promise((resolve, reject) => {
-      db.query('DELETE FROM weather_data WHERE city = ?', [city], (err, result) => {
+      db.query('DELETE FROM weather_data WHERE city = ? AND temperature < 25', [city], (err, result) => {
         if (err) return reject(err);
         console.log(`Deleted ${result.affectedRows} existing rows for ${city}`);
         resolve();
