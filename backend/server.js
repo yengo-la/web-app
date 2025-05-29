@@ -7,7 +7,7 @@ const cron = require('node-cron');
 
 const app = express();
 app.use(cors({
-    origin: 'http://localhost:5173', // your React dev server
+    origin: 'http://localhost:5173',
   credentials: true
 }));
 app.use(express.json());
@@ -33,7 +33,7 @@ app.get('/weather/twentyfive', (req, res) => {
     FROM weather_data
     WHERE temperature > 25
     ORDER BY date DESC, time DESC
-    LIMIT 32
+    LIMIT 64
   `;
 
   db.query(query, (err, results) => {
@@ -55,7 +55,7 @@ app.get('/weather', (req, res) => {
       weather_type
     FROM weather_data
     ORDER BY date DESC, time DESC
-    LIMIT 32
+    LIMIT 64
   `;
 
   db.query(query, (err, results) => {
@@ -63,8 +63,6 @@ app.get('/weather', (req, res) => {
     res.json(results);
   });
 });
-
-
 
 async function fetchAndStoreWeather(city) {
 
@@ -81,12 +79,13 @@ async function fetchAndStoreWeather(city) {
   const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${coords.lat}&lon=${coords.lon}&appid=${apiKey}&units=metric`;
 
   try {
+
     const res = await axios.get(url);
     const data = res.data;
 
-    const forecast = data.list[0]; // First forecast data point
+    const forecast = data.list[0];
     console.log('Forecast count:', data.list.length);
-    const weatherData = data.list.slice(0, 32).map(forecast => ({
+    const weatherData = data.list.slice(0, 16).map(forecast => ({
         city: data.city.name,
         date: forecast.dt_txt.split(' ')[0],
         time: forecast.dt_txt.split(' ')[1].slice(0, 5),
@@ -100,10 +99,16 @@ async function fetchAndStoreWeather(city) {
 
     //INSERT
     const sql = `
-      INSERT IGNORE INTO weather_data 
-      (city, date, time, humidity, pressure, wind_speed, temperature, weather_type) 
+      INSERT INTO weather_data 
+      (city, date, time, humidity, pressure, wind_speed, temperature, weather_type)
       VALUES (?, ?, ?, ?, ?, ?, ?, ?)
-    `;
+      ON DUPLICATE KEY UPDATE 
+      humidity = VALUES(humidity),
+      pressure = VALUES(pressure),
+      wind_speed = VALUES(wind_speed),
+      temperature = VALUES(temperature),
+      weather_type = VALUES(weather_type)
+  `;
 
     for (const entry of weatherData) {
         const values = [
@@ -126,6 +131,7 @@ async function fetchAndStoreWeather(city) {
         });
       });
     }
+
 
   } catch (err) {
     console.error('Error fetching weather data:', err.response?.data || err.message);
