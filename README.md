@@ -30,10 +30,10 @@ Will add a search bar in the component "NavbarExtension.jsx"
 ## NEED TO DO
 In the backend directory you must change the content of the .env file to your own credentials.
 ```.env
-DB_HOST=your_host_name
-DB_USER=your_user
-DB_PASS=your_password
-DB_NAME=database_name()
+DB_HOST=your_host_name (localhost)
+DB_USER=your_user (root)
+DB_PASS=your_password (0000)
+DB_NAME=database_name (container)
 
 OPENWEATHER_API_KEY=your_api
 ```
